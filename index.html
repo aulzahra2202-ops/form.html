@@ -1,0 +1,213 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran</title>
+    <style>
+        /* Kotak luar pembungkus seluruh formulir */
+        .form-luar {
+            border: 2px solid #000000;
+            padding: 25px;
+            width: 450px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 20px auto;
+            background-color: #ffffff;
+        }
+
+        /* Judul utama Formulir */
+        .judul-form {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 0 0 20px 0;
+            text-decoration: underline;
+        }
+
+        /* Pengaturan grup input agar berjarak ke bawah */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        /* Gaya teks label di atas input */
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* Gaya khusus untuk label pilihan radio dan checkbox agar sejajar */
+        .pilihan-label {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            font-weight: normal !important;
+        }
+
+        /* Pengaturan kolom input teks standar */
+        .input-text {
+            width: 70%;
+            padding: 4px;
+            border: 1px solid #000000;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        /* Placeholder dengan teks abu-abu miring */
+        .input-text::placeholder {
+            color: #888888;
+            font-style: italic;
+        }
+
+        /* Lebar khusus input umur */
+        .input-umur {
+            width: 20%;
+        }
+
+        /* Lebar khusus dropdown jurusan */
+        .select-jurusan {
+            width: 60%;
+            padding: 4px;
+            border: 1px solid #000000;
+            font-size: 14px;
+        }
+
+        /* Pengaturan kotak alamat */
+        .textarea-alamat {
+            width: 100%;
+            height: 100px;
+            padding: 6px;
+            border: 1px solid #000000;
+            font-size: 14px;
+            resize: none;
+            box-sizing: border-box;
+        }
+        
+        .textarea-alamat::placeholder {
+            color: #888888;
+            font-style: italic;
+        }
+
+        /* Pengaturan tombol kirim dan reset di bagian bawah */
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 4px 12px;
+            border: 1px solid #767676;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 5px;
+            border-radius: 2px;
+        }
+
+        .btn:hover {
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-luar">
+        <div class="judul-form">Formulir Pendaftaran</div>
+
+        <form action="#" method="POST">
+            
+            <!-- Nama Lengkap -->
+            <div class="input-group">
+                <label>Nama Lengkap:</label>
+                <input type="text" class="input-text" placeholder="Masukkan nama">
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <label>Email:</label>
+                <input type="email" class="input-text" placeholder="nama@email.com">
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label>Password:</label>
+                <input type="password" class="input-text">
+            </div>
+
+            <!-- Umur -->
+            <div class="input-group">
+                <label>Umur:</label>
+                <input type="number" class="input-text input-umur">
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div class="input-group">
+                <label>Tanggal Lahir:</label>
+                <input type="date" class="input-text" style="width: 50%;">
+            </div>
+
+            <!-- Jenis Kelamin -->
+            <div class="input-group">
+                <label>Jenis Kelamin:</label>
+                <label class="pilihan-label">
+                    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
+                </label>
+                <label class="pilihan-label">
+                    <input type="radio" name="gender" value="Perempuan"> Perempuan
+                </label>
+            </div>
+
+            <!-- Hobi -->
+            <div class="input-group">
+                <label>Hobi:</label>
+                <label class="pilihan-label">
+                    <input type="checkbox" name="hobi" value="Coding"> Coding
+                </label>
+                <label class="pilihan-label">
+                    <input type="checkbox" name="hobi" value="Gaming"> Gaming
+                </label>
+                <label class="pilihan-label">
+                    <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+                </label>
+            </div>
+
+            <!-- Jurusan -->
+            <div class="input-group">
+                <label>Jurusan:</label>
+                <select class="select-jurusan">
+                    <option value="">-- Pilih Jurusan --</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Teknik Informatika">Teknik Informatika</option>
+                    <option value="Manajemen">Manajemen</option>
+                </select>
+            </div>
+
+            <!-- Alamat -->
+            <div class="input-group">
+                <label>Alamat:</label>
+                <textarea class="textarea-alamat" placeholder="Masukkan alamat"></textarea>
+            </div>
+
+            <!-- Foto -->
+            <div class="input-group">
+                <label>Foto:</label>
+                <input type="file">
+            </div>
+
+            <!-- Website -->
+            <div class="input-group">
+                <label>Website:</label>
+                <input type="url" class="input-text" placeholder="https://example.com">
+            </div>
+
+            <!-- Tombol Aksi -->
+            <div class="btn-container">
+                <button type="submit" class="btn">Kirim</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
